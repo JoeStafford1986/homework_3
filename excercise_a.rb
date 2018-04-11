@@ -40,6 +40,20 @@ def count_stops(station_array)
   p stops_count
 end
 
+def multiple_returns(station_name, index, station_array)
+  returns = []
+  a_return = station_array.fetch(index)
+  returns.push(a_return)
+  a_return = station_array[index]
+  returns.push(a_return)
+  for station in station_array
+    if station == station_name
+      returns.push(station)
+    end
+  end
+  p returns.count
+end
+
 
 
 
@@ -52,3 +66,4 @@ find_position("Linlithgow", stops)
 remove_station_by_name("Livingston", stops)
 remove_station_by_position(2, stops)
 count_stops(stops)
+multiple_returns("Falkirk High", 2, stops)
