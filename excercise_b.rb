@@ -58,4 +58,9 @@ def get_user_twitter(user_name, user_hash)
   p user_hash[user_name][:twitter]
 end
 
+def get_user_home(user_name, user_hash)
+  p user_hash[user_name][:home_town]
+end
+
 get_user_twitter("Jonathan", users)
+get_user_home("Erik", users)
