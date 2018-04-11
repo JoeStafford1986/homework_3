@@ -59,10 +59,11 @@ def reverse_stops(station_array)
   p station_array
 end
 
-
-
-
-
+def print_stops_as_loop(station_array)
+  for station in station_array
+    p station
+  end
+end
 
 #--------------------------------------------
 #invoke methods
@@ -75,3 +76,4 @@ remove_station_by_position(2, stops)
 count_stops(stops)
 multiple_returns("Falkirk High", 2, stops)
 reverse_stops(stops)
+print_stops_as_loop(stops)
