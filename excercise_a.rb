@@ -54,6 +54,13 @@ def multiple_returns(station_name, index, station_array)
   p returns.count
 end
 
+def reverse_stops(station_array)
+  station_array.reverse!
+  p station_array
+end
+
+
+
 
 
 
@@ -67,3 +74,4 @@ remove_station_by_name("Livingston", stops)
 remove_station_by_position(2, stops)
 count_stops(stops)
 multiple_returns("Falkirk High", 2, stops)
+reverse_stops(stops)
