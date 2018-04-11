@@ -62,5 +62,10 @@ def get_user_home(user_name, user_hash)
   p user_hash[user_name][:home_town]
 end
 
+def get_user_lottery(user_name, user_hash)
+  p user_hash[user_name][:lottery_numbers]
+end
+
 get_user_twitter("Jonathan", users)
 get_user_home("Erik", users)
+get_user_lottery("Erik", users)
