@@ -21,7 +21,14 @@ def find_position(station_name, station_array)
   p index
 end
 
-
+def remove_station_by_name(station_name, station_array)
+  for station in station_array
+    if station == station_name
+      station_array.delete(station_name)
+      p station_array
+    end
+  end
+end
 
 
 
@@ -32,3 +39,4 @@ add_to_end("Edinburgh Waverley", stops)
 add_to_start("Glasgow Queen St", stops)
 add_at_position("Polmont", 4, stops)
 find_position("Linlithgow", stops)
+remove_station_by_name("Livingston", stops)
