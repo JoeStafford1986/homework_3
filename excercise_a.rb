@@ -30,6 +30,11 @@ def remove_station_by_name(station_name, station_array)
   end
 end
 
+def remove_station_by_position(index, station_array)
+  station_array.delete_at(index)
+  p station_array
+end
+
 
 
 
@@ -40,3 +45,4 @@ add_to_start("Glasgow Queen St", stops)
 add_at_position("Polmont", 4, stops)
 find_position("Linlithgow", stops)
 remove_station_by_name("Livingston", stops)
+remove_station_by_position(2, stops)
