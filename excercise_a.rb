@@ -35,6 +35,11 @@ def remove_station_by_position(index, station_array)
   p station_array
 end
 
+def count_stops(station_array)
+  stops_count = station_array.count
+  p stops_count
+end
+
 
 
 
@@ -46,3 +51,4 @@ add_at_position("Polmont", 4, stops)
 find_position("Linlithgow", stops)
 remove_station_by_name("Livingston", stops)
 remove_station_by_position(2, stops)
+count_stops(stops)
