@@ -11,9 +11,14 @@ def add_to_start(station_name, station_array)
   p station_array
 end
 
-def add_at_position(station_name, position, array)
-  array.insert(position, station_name)
-  p array
+def add_at_position(station_name, position, station_array)
+  station_array.insert(position, station_name)
+  p station_array
+end
+
+def find_position(station_name, station_array)
+  index = station_array.index(station_name)
+  p index
 end
 
 
@@ -26,3 +31,4 @@ end
 add_to_end("Edinburgh Waverley", stops)
 add_to_start("Glasgow Queen St", stops)
 add_at_position("Polmont", 4, stops)
+find_position("Linlithgow", stops)
