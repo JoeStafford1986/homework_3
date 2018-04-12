@@ -91,9 +91,36 @@ def users_even_lottery_numbers(user_name, user_hash)
   p even_numbers
 end
 
+def add_to_user_lottery_numbers(user_name, lottery_number, user_hash)
+  numbers = user_hash[user_name][:lottery_numbers].push(lottery_number)
+  p user_hash[user_name][:lottery_numbers]
+end
+
+def change_users_hometown(user_name, new_home, user_hash)
+  user_hash[user_name][:home_town] = new_home
+  p user_hash[user_name][:home_town]
+end
+
+def add_pet_to_user(user_name, pet_name, pet_species, user_hash)
+  new_pet = {name: pet_name, species: pet_species}
+  user_hash[user_name][:pets].push(new_pet)
+  p user_hash[user_name][:pets]
+end
+
+# def add_user(user_name, twitter_in, lottery_numbers_in, home_town_in, pet_name_in, pet_species_in, user_hash)
+#   new_user = {
+#     user_name: {
+#       {twitter: twitter_in}, {lottery_numbers: lottery_numbers_in}, {home_town: home_town_in}, {:pets = [{name: pet_name_in} {species: pet_species_in}]}
+#     }
+# end
+
 get_user_twitter("Jonathan", users)
 get_user_home("Erik", users)
 get_user_lottery("Erik", users)
 users_type_of_pet_by_name("Avril", "monty", users)
 users_smallest_lottery_number("Erik", users)
 users_even_lottery_numbers("Avril", users)
+add_to_user_lottery_numbers("Erik", 7, users)
+change_users_hometown("Erik", "Edinburgh", users)
+add_pet_to_user("Erik", "Fluffy", "dog", users)
+#add_user("Joe", "joe_s", [1,2,3,4,5,6], "Edinburgh", "Mick", "dog", users)
