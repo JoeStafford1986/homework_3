@@ -66,6 +66,15 @@ def get_user_lottery(user_name, user_hash)
   p user_hash[user_name][:lottery_numbers]
 end
 
+def users_type_of_pet_by_name(user_name, pet_name, user_hash)
+  for pet in user_hash[user_name][:pets]
+    if pet[:name] == pet_name
+      p pet[:species]
+    end
+  end
+end
+
 get_user_twitter("Jonathan", users)
 get_user_home("Erik", users)
 get_user_lottery("Erik", users)
+users_type_of_pet_by_name("Avril", "monty", users)
