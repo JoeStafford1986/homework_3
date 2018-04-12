@@ -74,7 +74,26 @@ def users_type_of_pet_by_name(user_name, pet_name, user_hash)
   end
 end
 
+def users_smallest_lottery_number(user_name, user_hash)
+  numbers = user_hash[user_name][:lottery_numbers]
+  numbers.sort!
+  p numbers[0]
+end
+
+def users_even_lottery_numbers(user_name, user_hash)
+  numbers = user_hash[user_name][:lottery_numbers]
+  even_numbers = []
+  for lottery_number in numbers
+    if lottery_number % 2 == 0
+      even_numbers.push(lottery_number)
+    end
+  end
+  p even_numbers
+end
+
 get_user_twitter("Jonathan", users)
 get_user_home("Erik", users)
 get_user_lottery("Erik", users)
 users_type_of_pet_by_name("Avril", "monty", users)
+users_smallest_lottery_number("Erik", users)
+users_even_lottery_numbers("Avril", users)
